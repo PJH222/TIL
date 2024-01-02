@@ -2,6 +2,7 @@
 
 def solution(numbers, hand):
     answer = ''
+<<<<<<< HEAD
     key_pad = [[1,2,3],[4,5,6],[7,8,9],['*',0,'#']]
 
     L_w = [3,0] #Left finger where it is (x,y)
@@ -53,6 +54,8 @@ def solution(numbers, hand):
                                 L_w[1] = j
         print(L_w, R_w, number)
 
+=======
+>>>>>>> 439beb103e41b087e5ef101a66ce72716d4247e9
     return answer
 
 
