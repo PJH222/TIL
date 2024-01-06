@@ -21,7 +21,6 @@ for t in range(T):
     for i in range(n+1): #1의 갯수
         for j in range(n//2+1): #2의 갯수
             if i + 2*j == n//10:
-                answer = [i,j] #1의 갯수와 2의 갯수를 표시
                 if j == 0:
                     ans_sum += 1
                 elif i == 0:
