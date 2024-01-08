@@ -29,5 +29,6 @@ def process_solution(a,k):
 
 MAXCANDIDATES = 100
 NMAX = 100
-a = [0]*NMAX
+a =[0]*NMAX
 backtrack(a,0,3)
+print(a)
