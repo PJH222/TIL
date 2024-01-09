@@ -5,3 +5,4 @@ sys.stdin = open('input.txt')
 # 각 경우에 대해 최 끝단 까지 움직여 3에 도달하는지 모두 확인 해야 함...
 
 def waymore(cage,y,x): #움질일 수 있는 방향 찾기
+    pass
