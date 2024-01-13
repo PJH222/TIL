@@ -33,12 +33,13 @@ def dfs_perm(lst, n):
         stack.append([i])
 
     while len(stack) != 0:
-        cur = stack.pop()
+        cur = stack.pop() # 지웠던 원소
 
-        for i in idx:
-            if i not in cur:
-                temp = cur + [i]
-                if len(temp) == n:
+        for i in idx: # 1,2,3,4,5
+            if i not in cur:    # 컬 != i 라는 뜻인가?
+                temp = cur + [i] # 새로운 리스트 temp 생성
+                print(temp)
+                if len(temp) == n:  # 내가 원하는 길이가 될때 까지 반복?
                     element = []
                     for i in temp:
                         element.append(lst[i])
