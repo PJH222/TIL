@@ -2,7 +2,7 @@
 def solution(numbers, target):
     answer = 0
 
-    for i in permutations_4([1, -1], len(numbers)):
+    for i in permutations([1, -1], len(numbers)):
         a = 0
         for j in range(len(numbers)):
             a += i[j] * numbers[j]
@@ -12,12 +12,12 @@ def solution(numbers, target):
 
     return answer
 
-def permutations_4(array, r):
+def permutations(array, r):
     for i in range(len(array)):
         if r == 1:
             yield [array[i]]
         else:
-            for next in permutations_4(array, r-1):
+            for next in permutations(array, r-1):
                 yield [array[i]] + next
 
 
