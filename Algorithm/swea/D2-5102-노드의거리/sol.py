@@ -1,45 +1,54 @@
 import sys
 sys.stdin = open('./input.txt')
 
-def link(cnt,start):
-    global list_start
+# 푸는 방식은 맞는데, 시간초과 발생,,,
+def find(stack):
+    sub = [0,0]
+    for i in range(len(stack)):
+        for j in range(i+1,len(stack)):
+            if i!=j and stack[i] != stack[j] and stack[i] != stack[j][::-1]:
+                if stack[i][0] == stack[j][0] and (stack[j][-1] == S or stack[j][-1] == G or stack[i][-1] == S or stack[i][-1] == G):
+                    sub = stack[j][::-1] + stack[i][1:]
+                    stack.append(sub)
 
-    for i in go:
-        if i[0] == start[0] and i not in list_start:
-            list_start.append(i)
-            cnt += 1
-            start = i
-            node.append(start+i[1])
-        elif i[0] == start[1]:
-            if (start+i[1])[0] == S and (start+i[1])[-1] == G :
-                return cnt
-            else:
-                node.append(start + i[1])
-                list_start.append(i)
-                link(cnt,start)
+                elif stack[i][0] == stack[j][-1] and (stack[j][0] == S or stack[j][0] == G or stack[i][-1] == S or stack[i][-1] == G):
+                    sub =stack[j][0:len(stack[j])-1] + stack[i]
+                    # if sub not in stack:
+                    stack.append(sub)
 
+                elif stack[i][-1] == stack[j][0] and (stack[i][0] == S or stack[i][0] == G or stack[j][-1] == S or stack[j][-1] == G):
+                    sub = stack[i] + stack[j][1:]
+                    # if sub not in stack:
+                    stack.append(sub)
 
-
-
+                elif stack[i][-1] == stack[j][-1] and (stack[j][0] == S or stack[j][0] == G or stack[i][0] == S or stack[i][0] == G):
+                    sub =stack[j][:len(stack[j])-1] + stack[i][::-1]
+                    # if sub not in stack:
+                    stack.append(sub)
+                # print(stack[i], stack[j], sub, t)
+                if (sub[0] == S and sub[-1] == G) or (sub[-1] == S and sub[0] == G):
+                    # print(sub)
+                    return len(sub) - 1
+                # print(stack[i],stack[j], sub, t)
 
 
 T = int(input())
-for t in range(1,T+1):
-    node = []
+
+for t in range(1, T+1):
     V,E = list(map(int,input().split()))
-    for _ in range(E):
-        go = list(map(int,input().split()))
-        node.append(go)
+    stack = []
+    result = []
+    sub = []
+    for i in range(E):
+        one_node = list(map(int,input().split()))
+        stack.append(one_node)
     S,G = list(map(int,input().split()))
-    min = 1000
-    list_start = []
-    cnt = 1
-    start = [S,-1]
-    if [S,G] in node or [G,S] in node:
-        answer = 1
-        break
-    else:
-        print(link(cnt,start))
+    cnt = 0
+    print('#{} {}'.format(t,find(stack)))
+
+
+
+
 
 
 
