@@ -11,14 +11,13 @@ def bfs(graph,start,visited):
 
     while queue:
         v = queue.popleft()
-        print(v, end=' ')
         # print(queue)
         for i in graph[v]:
             if not visited[i]:
                 queue.append(i)
                 # print(queue)
                 visited[i] = True
-        print(queue)
+        # print(queue)
 graph = [
     [],         # 0번과 연결된, 사실 없는데, 답이 정돈되게 출력하기 위해 빈 리스트를 삽입한 것임.
     [2,3,8],    # 1번과 연결된 노드

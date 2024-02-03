@@ -68,7 +68,8 @@ dx = [0,0,-1,1]
 dy = [1,-1,0,0]
 cnt = 0
 bfs(0,0)
-print(graph)
+for i in graph:
+    print(i)
 print(cnt)
 
 # 이거 근데 왜 [0][0]이 3으로 바뀌는거지??
