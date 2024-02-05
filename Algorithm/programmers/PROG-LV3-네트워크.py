@@ -6,7 +6,7 @@ def solution(n, computers):
     for i in range(len(computers)):
         visited = [0] * (n)
         que = deque()
-        que.append(i)
+        que.append(i) # 처음 시작점으로 i를 넣었던 것...
         visited[i] = 1 # [1 , 0 , 0] 즉 출발점은 1 임
         while que:
             a = que.popleft()
