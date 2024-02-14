@@ -1,3 +1,6 @@
+import sys
+sys.setrecursionlimit(10000)
+
 def bfs(i,j,reset_maps):
     global stack
 
