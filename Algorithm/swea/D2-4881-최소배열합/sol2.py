@@ -5,12 +5,9 @@ def DFS(cnt,sum_min):
     global answer
     if sum_min >= answer:
         return
-
-
     if cnt == N:
         answer = min(answer,sum_min)
         return
-
     for i in range(N):
         if check[i] == 0:
             check[i] = 1
