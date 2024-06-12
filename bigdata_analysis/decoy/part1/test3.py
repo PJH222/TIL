@@ -47,14 +47,14 @@ da = pd.read_csv("C:/Users/asd/TIL/bigdata_analysis/decoy/practice/Cars93.csv")
 
 
  # 12번
-da = pd.read_csv("C:/Users/asd/TIL/bigdata_analysis/decoy/practice/Boston.csv")
-# print(max(da['medv']))
-
-da['bin'] = pd.cut(da['medv'], bins=[i for i in range(0, 100 , 10)])
-aa = da['bin'].value_counts().idxmax()
-result = da['dis'][da['bin'] == aa].median()
-answer = round(result, 2)
-print(answer)
+# da = pd.read_csv("C:/Users/asd/TIL/bigdata_analysis/decoy/practice/Boston.csv")
+# # print(max(da['medv']))
+#
+# da['bin'] = pd.cut(da['medv'], bins=[i for i in range(0, 100 , 10)])
+# aa = da['bin'].value_counts().idxmax()
+# result = da['dis'][da['bin'] == aa].median()
+# answer = round(result, 2)
+# print(answer)
 
 
 
