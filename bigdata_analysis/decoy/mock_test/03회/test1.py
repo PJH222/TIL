@@ -261,44 +261,8 @@
 # predays        0.0401      0.131      0.307      0.761      -0.226       0.306
 
 
-# import pandas as pd
-#
-# da  = pd.read_csv("airpollution.csv")
-#
-# city = da['city'].copy()
-# from statsmodels.stats.outliers_influence import OLSInfluence
-# import statsmodels.api as sm
-#
-# y = da['SO2']
-# x = da.drop(['SO2', 'city'], axis=1)
-# x = sm.add_constant(x)
-#
-# aa = OLSInfluence(sm.OLS(y,x).fit()).summary_frame()
-#
-# # print(aa.columns) ['dfb_const', 'dfb_temp', 'dfb_manu', 'dfb_popul', 'dfb_wind',
-# #        'dfb_precip', 'dfb_predays', 'cooks_d', 'standard_resid', 'hat_diag',
-# #        'dffits_internal', 'student_resid', 'dffits']
-#
-# print(aa[aa['cooks_d'] > 0.5])
-# answer_a = 0
-# print(aa[aa['dffits'] > 0.9])
-# answer_b = 2 # index = [30, 32] Phoenix Providence
-#
-# stu = aa['student_resid']
-# cond = (stu > 3) | (stu < -3)
-# print(aa[cond])
-# answer_c = 1 # index = [32] Providence
-#
-# # print(city.iloc[30:33]) Phoenix Providence
-#
-# y2 = y[city != "Providence"]
-# x2 = x[city != "Providence"]
-# result2 = sm.OLS(y2,x2).fit()
-# # print(result2.summary()) manu wind
-# result = sm.OLS(y,x).fit()
-# # print(result.summary()) temp manu popul
-# answer_d = 1
-# print(answer_d)
+# import pandas as
+
 
 
 
