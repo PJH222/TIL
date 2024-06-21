@@ -107,35 +107,84 @@ y_test = y_test['Satisfaction'].map({"Satisfied":1,"Not satisfied":0})
 #        'Arrival_Delay_in_Minutes']
 
 # print(X_train.info()) # 결측치 없음
-for i in X_train.columns:
-    if X_train[i].dtype == 'object':
-        a = X_train[i].unique()
-        idx = 0
-        tmp = {}
-        for j in a:
-            tmp[j] = idx
-            idx += 1
-        X_train[i] = X_train[i].map(tmp)
-        X_test[i] = X_test[i].map(tmp)
+# for i in X_train.columns:
+#     if X_train[i].dtype == 'object':
+#         a = X_train[i].unique()
+#         idx = 0
+#         tmp = {}
+#         for j in a:
+#             tmp[j] = idx
+#             idx += 1
+#         X_train[i] = X_train[i].map(tmp)
+#         X_test[i] = X_test[i].map(tmp)
+#
+# from sklearn.model_selection import train_test_split
+# from sklearn.ensemble import RandomForestClassifier as rf
+# from sklearn.metrics import f1_score
+#
+# X_tr, X_val, y_tr , y_val = train_test_split(
+#     X_train, y_train, random_state = 23
+# )
+#
+# rff = rf()
+# model = rff.fit(X_tr,y_tr)
+# pred = model.predict(X_val)
+# score = f1_score(y_val,pred)
+#
+# obj = {"pred" : pred}
+# result = pd.DataFrame(obj)
+# # print(result)
+# result.to_csv("result.csv",index=False)
+#
+# real_pred = model.predict(X_test)
+# real_score = f1_score(y_test,real_pred)
+# print(score, real_score)
 
-from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestClassifier as rf
-from sklearn.metrics import f1_score
 
-X_tr, X_val, y_tr , y_val = train_test_split(
-    X_train, y_train, random_state = 23
-)
+# import pandas as pd
+# da = pd.read_csv("cancer.csv")
+# # print(da['x'].isna().sum())
+# answer_a = da['x'].isna().sum()
+#
+# from scipy.stats import chisquare as chi
+# import numpy as np
+#
+# x = da.value_counts().to_numpy()
+# x = np.append(x, answer_a) # 순서에 따라 붙어지니 유의할 것
+# print(x)
+# n = da.shape[0]
+# cold_x = np.array([0.05,0.05,0.1,0.8]) * n
+# print(cold_x)
+# aa, bb = chi(x, cold_x)
+# print(int(round(aa,0)))
+#
+# print(int(round(bb, 0)))
 
-rff = rf()
-model = rff.fit(X_tr,y_tr)
-pred = model.predict(X_val)
-score = f1_score(y_val,pred)
-
-obj = {"pred" : pred}
-result = pd.DataFrame(obj)
-# print(result)
-result.to_csv("result.csv",index=False)
-
-real_pred = model.predict(X_test)
-real_score = f1_score(y_test,real_pred)
-print(score, real_score)
+# import pandas as pd
+# da = pd.read_csv("airquality.csv")
+# da = da.copy().dropna()
+#
+# ind_col = ['Solar.R', 'Wind','Temp']
+# dep_col = ['Ozone']
+#
+# import statsmodels.api as sm
+#
+# y = da.copy()[dep_col]
+# x = da.copy().drop(['Ozone','Month','Day'], axis = 1)
+# x = sm.add_constant(x)
+#
+# aa = sm.OLS(y,x).fit()
+# # print(aa.summary())
+#
+# answer_a = round(0.0637,2)
+# answer_b = round(2.234,2)
+# da_new = pd.read_csv("airquality_new.csv")
+#
+# x_new = da_new.copy()[ind_col]
+# x_new = sm.add_constant(x_new)
+# pred = aa.get_prediction(x_new)
+#
+# print(pred.summary_frame().iloc[9])
+# answer_c = round(91.763178, 2)
+#
+# print(answer_a, answer_b,answer_c)
