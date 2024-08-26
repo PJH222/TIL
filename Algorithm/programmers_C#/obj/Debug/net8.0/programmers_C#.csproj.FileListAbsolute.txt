@@ -1,0 +1,15 @@
+C:\Users\asd\TIL\Algorithm\programmers_C#\bin\Debug\net8.0\programmers_C#.exe
+C:\Users\asd\TIL\Algorithm\programmers_C#\bin\Debug\net8.0\programmers_C#.deps.json
+C:\Users\asd\TIL\Algorithm\programmers_C#\bin\Debug\net8.0\programmers_C#.runtimeconfig.json
+C:\Users\asd\TIL\Algorithm\programmers_C#\bin\Debug\net8.0\programmers_C#.dll
+C:\Users\asd\TIL\Algorithm\programmers_C#\bin\Debug\net8.0\programmers_C#.pdb
+C:\Users\asd\TIL\Algorithm\programmers_C#\obj\Debug\net8.0\programmers_C#.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\asd\TIL\Algorithm\programmers_C#\obj\Debug\net8.0\programmers_C#.AssemblyInfoInputs.cache
+C:\Users\asd\TIL\Algorithm\programmers_C#\obj\Debug\net8.0\programmers_C#.AssemblyInfo.cs
+C:\Users\asd\TIL\Algorithm\programmers_C#\obj\Debug\net8.0\programmers_C#.csproj.CoreCompileInputs.cache
+C:\Users\asd\TIL\Algorithm\programmers_C#\obj\Debug\net8.0\programmers_C#.sourcelink.json
+C:\Users\asd\TIL\Algorithm\programmers_C#\obj\Debug\net8.0\programmers_C#.dll
+C:\Users\asd\TIL\Algorithm\programmers_C#\obj\Debug\net8.0\refint\programmers_C#.dll
+C:\Users\asd\TIL\Algorithm\programmers_C#\obj\Debug\net8.0\programmers_C#.pdb
+C:\Users\asd\TIL\Algorithm\programmers_C#\obj\Debug\net8.0\programmers_C#.genruntimeconfig.cache
+C:\Users\asd\TIL\Algorithm\programmers_C#\obj\Debug\net8.0\ref\programmers_C#.dll
