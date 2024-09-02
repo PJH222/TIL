@@ -1,0 +1,15 @@
+C:\Users\asd\TIL\Algorithm\programmers_C#\123\obj\Debug\net8.0\123.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\asd\TIL\Algorithm\programmers_C#\123\obj\Debug\net8.0\123.AssemblyInfoInputs.cache
+C:\Users\asd\TIL\Algorithm\programmers_C#\123\obj\Debug\net8.0\123.AssemblyInfo.cs
+C:\Users\asd\TIL\Algorithm\programmers_C#\123\obj\Debug\net8.0\123.csproj.CoreCompileInputs.cache
+C:\Users\asd\TIL\Algorithm\programmers_C#\123\obj\Debug\net8.0\123.sourcelink.json
+C:\Users\asd\TIL\Algorithm\programmers_C#\123\bin\Debug\net8.0\123.exe
+C:\Users\asd\TIL\Algorithm\programmers_C#\123\bin\Debug\net8.0\123.deps.json
+C:\Users\asd\TIL\Algorithm\programmers_C#\123\bin\Debug\net8.0\123.runtimeconfig.json
+C:\Users\asd\TIL\Algorithm\programmers_C#\123\bin\Debug\net8.0\123.dll
+C:\Users\asd\TIL\Algorithm\programmers_C#\123\bin\Debug\net8.0\123.pdb
+C:\Users\asd\TIL\Algorithm\programmers_C#\123\obj\Debug\net8.0\123.dll
+C:\Users\asd\TIL\Algorithm\programmers_C#\123\obj\Debug\net8.0\refint\123.dll
+C:\Users\asd\TIL\Algorithm\programmers_C#\123\obj\Debug\net8.0\123.pdb
+C:\Users\asd\TIL\Algorithm\programmers_C#\123\obj\Debug\net8.0\123.genruntimeconfig.cache
+C:\Users\asd\TIL\Algorithm\programmers_C#\123\obj\Debug\net8.0\ref\123.dll

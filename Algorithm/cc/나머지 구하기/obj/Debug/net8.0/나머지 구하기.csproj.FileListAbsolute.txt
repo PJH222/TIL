@@ -1,0 +1,5 @@
+C:\Users\asd\TIL\Algorithm\programmers_C#\나머지 구하기\obj\Debug\net8.0\나머지 구하기.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\asd\TIL\Algorithm\programmers_C#\나머지 구하기\obj\Debug\net8.0\나머지 구하기.AssemblyInfoInputs.cache
+C:\Users\asd\TIL\Algorithm\programmers_C#\나머지 구하기\obj\Debug\net8.0\나머지 구하기.AssemblyInfo.cs
+C:\Users\asd\TIL\Algorithm\programmers_C#\나머지 구하기\obj\Debug\net8.0\나머지 구하기.csproj.CoreCompileInputs.cache
+C:\Users\asd\TIL\Algorithm\programmers_C#\나머지 구하기\obj\Debug\net8.0\나머지 구하기.sourcelink.json
