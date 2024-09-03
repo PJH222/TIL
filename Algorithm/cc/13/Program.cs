@@ -3,12 +3,15 @@ using System.Collections.Generic;
 
 public class Solution {
     public int[] solution(int n) {
-        List<int> oddNumbers = new List<int>();
+        int[] answer = new int[] {};
+        List<int> aa = new List<int>();
         
-        for (int i = 1; i <= n; i += 2) {
-            oddNumbers.Add(i);
+        for (int i=1; i<=n; i += 2){
+            aa.Add(i);
         }
         
-        return oddNumbers.ToArray();
+        Console.WriteLine(String.Join(" ",aa));
+        answer = aa.ToArray();
+        return answer;
     }
 }
