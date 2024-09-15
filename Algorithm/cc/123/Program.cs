@@ -1,17 +1,15 @@
 ﻿using System;
-
-class Program
-{
-    public static void Main()
-    {
-        Console.WriteLine("123");
-    }
-}
+using System.Collections.Generic;
+using System.Linq;
 
 public class Solution {
-    public int solution(int num1, int num2) {
-        int answer = -1;
-        Console.WriteLine(answer);
-        return answer;
+    public string[] solution(string myString) {
+        List<string> answer = (myString.Split("x")).ToList();
+        int cnt = 0;
+        for (int i = 0 ; i<answer.Count ; i++){ if (answer[i]=="") cnt += 1;}
+        for (int i = 0 ; i<cnt ; i++) answer.Remove("");
+        
+        answer.Sort();
+        return answer.ToArray();
     }
 }
