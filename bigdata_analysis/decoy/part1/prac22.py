@@ -379,29 +379,31 @@ ex = pd.read_csv("C:/Users/asd/TIL/bigdata_analysis/decoy/practice/Cars93.csv")
 # answer = round(res,2)
 # print(answer)
 
-ex = pd.read_csv("C:/Users/asd/TIL/bigdata_analysis/decoy/practice/Melanoma.csv")
-df1 = ex.copy()[:123]
-df2 = ex.copy()[123:]
+# ex = pd.read_csv("C:/Users/asd/TIL/bigdata_analysis/decoy/practice/Melanoma.csv")
+# df1 = ex.copy()[:123]
+# df2 = ex.copy()[123:]
 
-men = df1['thickness'].mean()
-sd = df1['thickness'].std()
+# men = df1['thickness'].mean()
+# sd = df1['thickness'].std()
 
-print(men, sd)
-dt1 = df1['thickness']
-dt2 = df2['thickness']
+# print(men, sd)
+# dt1 = df1['thickness']
+# dt2 = df2['thickness']
 
-df1['zz'] = (dt1 - men) / sd
-df2['zz'] = (dt2 - men) / sd
+# df1['zz'] = (dt1 - men) / sd
+# df2['zz'] = (dt2 - men) / sd
 
 
-zz1 = df1['zz'].copy()
-zz2 = df2['zz'].copy()
-# print(zz1)
-cond1 = ((zz1 < 1) & (zz1 > -1))
-cond2 = ((zz2 < 1) & (zz2 > -1))
+# zz1 = df1['zz'].copy()
+# zz2 = df2['zz'].copy()
+# # print(zz1)
+# cond1 = ((zz1 < 1) & (zz1 > -1))
+# cond2 = ((zz2 < 1) & (zz2 > -1))
 
-res1 = zz1[cond1].median()
-res2 = zz2[cond2].median()
+# res1 = zz1[cond1].median()
+# res2 = zz2[cond2].median()
 
-answer = round(res1 + res2 , 4)
-print(answer)
+# answer = round(res1 + res2 , 4)
+# print(answer)
+
+
