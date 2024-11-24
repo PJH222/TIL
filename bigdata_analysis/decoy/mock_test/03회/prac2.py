@@ -55,7 +55,7 @@ xgb_rmse = mse(y_val, xgb_pred)
 print()
 print(rf_rmse, xgb_rmse)
 
-pred = xgb_model.predict(x_test)
+pred = rf_model.predict(x_test)
 obj = {"pred" : pred}
 result = pd.DataFrame(obj)
 
