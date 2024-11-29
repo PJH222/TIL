@@ -42,68 +42,123 @@ df = pd.read_csv("C:/Users/asd/TIL/bigdata_analysis/decoy/history/06회/five_cri
 
 # df['year'] = df['연월'].str[:4]
 # df['month'] = df['연월'].str[5:7]
-# df['sum'] = df['살인_발생건수'] +   df['강도_발생건수']   +df['강간_강제추행_발생건수']+    df['절도_발생건수']    +df['폭력_발생건수']  
+# # df['sum'] = df['살인_발생건수'] +   df['강도_발생건수']   +df['강간_강제추행_발생건수']+    df['절도_발생건수']    +df['폭력_발생건수']  
 
-# tmp = df.groupby('year')['sum'].mean().idxmax()
-# answer = df['폭력_발생건수'][df['year'] == tmp].mean()
-# print(int(answer))
+# # tmp = df.groupby('year')['sum'].mean().idxmax()
+# # answer = df['폭력_발생건수'][df['year'] == tmp].mean()
+# # print(int(answer))
 
 
-x_train = pd.read_csv("C:/Users/asd/TIL/bigdata_analysis/decoy/history/06회/Airline_train.csv")
-x_test = pd.read_csv("C:/Users/asd/TIL/bigdata_analysis/decoy/history/06회/Airline_test.csv")
-y_test = pd.read_csv("C:/Users/asd/TIL/bigdata_analysis/decoy/history/06회/Airline_y_test.csv")
+# x_train = pd.read_csv("C:/Users/asd/TIL/bigdata_analysis/decoy/history/06회/Airline_train.csv")
+# x_test = pd.read_csv("C:/Users/asd/TIL/bigdata_analysis/decoy/history/06회/Airline_test.csv")
+# y_test = pd.read_csv("C:/Users/asd/TIL/bigdata_analysis/decoy/history/06회/Airline_y_test.csv")
 
-y_train = x_train['Satisfaction'].copy()
-x_train = x_train.drop(columns = 'Satisfaction' , axis = 1)
-# print(y_train, y_test)
+# y_train = x_train['Satisfaction'].copy()
+# x_train = x_train.drop(columns = 'Satisfaction' , axis = 1)
+# # print(y_train, y_test)
 
-y_train = y_train.map({"Yes" : 1 , "No" : 0})
-y_test = y_test['Satisfaction'].map({"Satisfied" : 1 , "Not satisfied" : 0})
-# print(x_train.columns)
+# y_train = y_train.map({"Yes" : 1 , "No" : 0})
+# y_test = y_test['Satisfaction'].map({"Satisfied" : 1 , "Not satisfied" : 0})
+# # print(x_train.columns)
 
-# print(x_train.info(), x_test.info(), y_train.info())
-tmp = []
-for i in x_train.columns:
-    a = x_train[i].unique()
-    b = x_train[i].dtype
-    # print(b,len(a) , i)
-    if b == 'object':
-        tmp.append(i)
+# # print(x_train.info(), x_test.info(), y_train.info())
+# tmp = []
+# for i in x_train.columns:
+#     a = x_train[i].unique()
+#     b = x_train[i].dtype
+#     # print(b,len(a) , i)
+#     if b == 'object':
+#         tmp.append(i)
 
-from sklearn.preprocessing import LabelEncoder as le
+# from sklearn.preprocessing import LabelEncoder as le
 
-lle = le()
+# lle = le()
 
-for i in tmp:
-    a = lle.fit(x_train[i])
-    x_train[i] = a.transform(x_train[i])
-    x_test[i] = a.transform(x_test[i])
+# for i in tmp:
+#     a = lle.fit(x_train[i])
+#     x_train[i] = a.transform(x_train[i])
+#     x_test[i] = a.transform(x_test[i])
 
-from sklearn.model_selection import train_test_split as tts
+# from sklearn.model_selection import train_test_split as tts
 
-x , x_val, y , y_val = tts(x_train, y_train, random_state = 1234 , test_size = 0.2, stratify = y_train)
+# x , x_val, y , y_val = tts(x_train, y_train, random_state = 1234 , test_size = 0.2, stratify = y_train)
 
-from sklearn.ensemble import RandomForestClassifier as rff
-from xgboost import XGBClassifier as xgg
-from lightgbm import LGBMClassifier as lgg
-from sklearn.metrics import f1_score as f1
+# from sklearn.ensemble import RandomForestClassifier as rff
+# from xgboost import XGBClassifier as xgg
+# from lightgbm import LGBMClassifier as lgg
+# from sklearn.metrics import f1_score as f1
 
-rf , xg , lg = rff(),xgg(),lgg()
-rf,xg,lg = rf.fit(x,y),xg.fit(x,y),lg.fit(x,y)
-rf_model,xg_model,lg_model = rf.predict(x_val),xg.predict(x_val),lg.predict(x_val)
-rf1,xg1,lg1 = f1(y_val, rf_model),f1(y_val, xg_model),f1(y_val, lg_model)
+# rf , xg , lg = rff(),xgg(),lgg()
+# rf,xg,lg = rf.fit(x,y),xg.fit(x,y),lg.fit(x,y)
+# rf_model,xg_model,lg_model = rf.predict(x_val),xg.predict(x_val),lg.predict(x_val)
+# rf1,xg1,lg1 = f1(y_val, rf_model),f1(y_val, xg_model),f1(y_val, lg_model)
 
-print(rf1,xg1,lg1)
+# print(rf1,xg1,lg1)
 
-real = lg.predict(x_test)
-# real = real.map({1 : "Satisfied" , 0 : "Not satisfied"})
-obj = {"pred" : real}
-print(real)
-result = pd.DataFrame(obj)
-# print(result)
-result = result["pred"].map({1 : "Satisfied" , 0 : "Not satisfied"})
+# real = lg.predict(x_test)
+# # real = real.map({1 : "Satisfied" , 0 : "Not satisfied"})
+# obj = {"pred" : real}
+# print(real)
+# result = pd.DataFrame(obj)
+# # print(result)
+# result = result["pred"].map({1 : "Satisfied" , 0 : "Not satisfied"})
 
-result.to_csv("result.csv" , index = False)
+# result.to_csv("result.csv" , index = False)
 
-tmp = f1(y_test , real)
-print(tmp)
+# tmp = f1(y_test , real)
+# print(tmp)
+
+
+df = pd.read_csv("C:/Users/asd/TIL/bigdata_analysis/decoy/history/06회/cancer.csv")
+
+# print(df.value_counts(), df.isna().sum()) [964,627,328,81]
+# tmp = [964,627,328,81]
+# answer1 = tmp[3]
+# print(answer1)
+
+# a = [0.05,0.05,0.1,0.8]
+# for i in range(4):
+#     a[i] = a[i] * sum(tmp)
+
+# print(a)
+
+# from scipy.stats import chisquare,chi2_contingency
+
+
+
+# aa = chisquare(tmp, a)
+# print(aa)
+
+# tb = pd.crosstab(tmp,a)
+# bb = chi2_contingency(tb)
+# print(bb)
+
+
+df = pd.read_csv("C:/Users/asd/TIL/bigdata_analysis/decoy/history/06회/airquality.csv")
+df_new = pd.read_csv("C:/Users/asd/TIL/bigdata_analysis/decoy/history/06회/airquality_new.csv")
+
+
+import statsmodels.api as sm
+col = ['Ozone', 'Solar.R', 'Wind', 'Temp']
+# print(df.columns) ['Ozone', 'Solar.R', 'Wind', 'Temp', 'Month', 'Day']
+df = df[['Ozone', 'Solar.R', 'Wind', 'Temp']]
+y = df['Ozone']
+x = df.copy().drop(columns = 'Ozone',axis = 1)
+x = sm.add_constant(x)
+
+a = sm.OLS(y,x).fit()
+print(a.summary())
+
+answer1 = round(0.0637 , 2)
+print(answer1)
+
+answer2 = round(2.234,2)
+print(answer2)
+y = df_new['Ozone']
+x_new = df_new[col].drop(columns = 'Ozone' , axis = 1)
+x_new = sm.add_constant(x_new)
+
+b = a.get_prediction(x_new)
+
+print(b.summary_frame().iloc[9])
+
